@@ -1,0 +1,194 @@
+@import url(./normalize.css);
+@import url(./reset.css);
+
+:root {
+    --darkblue: #8dc1f1;
+    --lightblue: #1667b3;
+    --pink: #F45B69;
+    --red: #CC2936;
+    --white: #EBF5EE;
+    --green: #b7efec;
+
+
+}
+
+@font-face {
+    font-family: 'UbuntuRegular';
+    src: url('../fonts/Ubuntu-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'UbuntuBold';
+    src: url('../fonts/Ubuntu-Bold.ttf');
+}
+
+body,
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--white);
+}
+
+#logo {
+    width: 40px;
+    height: 40px;
+    padding-right: 20px;
+    border-right: 2px solid var(--white);
+}
+
+
+
+
+h2 {
+    color: var(--white);
+    text-align: center;
+    font-family: UbuntuBold;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--darkblue);
+}
+
+
+
+#navbar ul {
+    background-color: var(--lightblue);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: left;
+    border-bottom: 10px solid var(--darkblue);
+}
+
+#navbar ul img:nth-of-type(2) {
+    width: 39px;
+    height: 39px;
+    background-color: transparent;
+    filter: invert(1);
+    margin-left: auto;
+    border-left: 2px solid black;
+    padding-left: 12px;
+}
+
+#navbar ul li:nth-of-type(4) {
+    color: var(--white);
+    font-size: 1.4rem;
+    margin-left: auto;
+    transform: translateY(-4px) translateX(80%);
+    border: 1px solid white;
+    padding: 2px 4px 4px 4px;
+}
+
+
+#navbar ul {
+    padding: 19px;
+}
+
+#navbar::after {
+    content: "";
+    background-color: var(--darkblue);
+    position: absolute;
+    top: 80px;
+    width: 100vw;
+    height: 24px;
+    z-index: 1;
+    border-bottom: 1px solid var(--lightblue);
+}
+
+ul li {
+    font-family: UbuntuBold;
+    list-style: none;
+    color: var(--white);
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+li {
+    display: inline;
+    margin: 0 10px;
+}
+
+li:hover {
+    border-bottom: 2px solid var(--white);
+    transform-origin: center;
+    cursor: pointer;
+}
+
+
+.sidebarConnexionOFF,
+.sidebarInscriptionOFF {
+    width: 298px;
+    height: 100vh;
+    background-color: var(--lightblue);
+    position: fixed;
+    top: 79px;
+    left: -300px;
+    /* Masquez le bandeau latéral en dehors de l'écran */
+    transition: left 0.3s ease;
+    border-right: 2px solid var(--white);
+    z-index: 9;
+}
+
+
+.active {
+    left: 0px;
+    transition: left 0.5s ease;
+}
+
+label {
+    font-family: UbuntuRegular;
+    color: var(--white);
+    margin: 10px 0;
+}
+
+input {
+    background-color: var(--white);
+    padding: 5px;
+    color: black;
+    border-radius: 5px;
+    width: 80%;
+    justify-self: center;
+}
+
+input::placeholder {
+    color: var(--lightblue);
+}
+
+#btn {
+    background-color: var(--lightblue);
+    font-family: UbuntuBold;
+    padding: 5px;
+    color: var(--white);
+    border-radius: 5px;
+    width: 50%;
+    justify-self: center;
+    margin: 40px 10px 10px 10px;
+}
+
+form {
+    background-color: var(--darkblue);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 110px);
+}
+
+form label {
+    margin-left: 20px;
+    align-self: flex-start;
+    background-color: var(--lightblue);
+    color: var(--darkblue);
+}
+
+#background {
+    width: 100vw;
+    height: calc(100vh - 87px);
+    background-color: var(--green);
+}
+
+#background p {
+    color: white;
+}
+
+#main {
+    width: 298px;
+    height: calc(100vh - 87px);
+    background-color: var(--white);
+}
